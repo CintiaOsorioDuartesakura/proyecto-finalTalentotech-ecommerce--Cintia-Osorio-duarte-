@@ -3,3 +3,4 @@
 una intro del producto y su historia , como tambien la compra de los mismos. La idea del proyecto es lograr visibilidad al empredimiento 
 para poder vender en forma virtual sin contar con un local fisico.
 **
+## Logo de Arami![Logo de la compañía](images/logo2.png) ##
