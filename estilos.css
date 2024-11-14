@@ -1,0 +1,141 @@
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-text h1 {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007BFF;
+}
+
+.header-social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.header-social-media a {
+  color: #333;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.header-social-media a:hover {
+  color: #007BFF;
+}
+
+.header-search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.header-search-bar input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.header-search-bar button { 
+  background-color: #4caf50;
+
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.carousel {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+footer {
+  background-color: #d38ee4;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #6c3aca;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left
+  ;
+}
+
+.product-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+}
+
+.product-box h2 {
+  margin-top: 0;
+  color: #007BFF;
+}
+
+.product-box p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
