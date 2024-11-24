@@ -1,3 +1,26 @@
+.header-text h1 {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1em;
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #007BFF;
+}
+
 form {
     width: 500px;
     margin: 0 auto;
@@ -65,25 +88,3 @@ body {
   align-items: center;
 }
 
-.header-text h1 {
-  margin-left: 10px;
-  font-size: 1.5em;
-  color: #333;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-menu a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1em;
-  padding: 10px;
-  transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-  color: #007BFF;
-}
