@@ -139,3 +139,13 @@ body {
   line-height: 1.5;
 }
 
+.form-control input{
+  
+    width: 500px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
