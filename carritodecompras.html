@@ -28,6 +28,40 @@
       </header>
         <section>Mis compras
         <h2>Compras realizadas</h2>
+        <table>
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Subtotal</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>Alfajor de chocolate</td>
+                  <td>2</td>
+                  <td>$4</td>
+                  <td>$8</td>
+                </tr>
+                <tr>
+                  <td>Alfajor de Maicena</td>
+                  <td>3</td>
+                  <td>$10</td>
+                  <td>$30</td>
+                </tr>
+                <tr>
+                  <td colspan="3">Total</td>
+                  <td>$38</td>
+                </tr>
+              </tbody>
+            <tfoot>
+              <tr>
+                <td colspan="3">Total</td>
+                <td id="total">0</td>
+              </tr>
+            </tfoot>
+          </table>
         <div class="compras-container">
             <div class="compra">
                 <div class="compra-info">
@@ -53,7 +87,7 @@
             <div class="compra-total">
                 <p>Total: $0</p>
             <button onclick="Compras">Confirmar</button>
-            
+
         </div>
         
         <div class="datos-de-pago">Datos de pago</div>
