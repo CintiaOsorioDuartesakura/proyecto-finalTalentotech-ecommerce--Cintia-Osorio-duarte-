@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 let carrito = [];
 
-function agregarAlCarrito(nombre, precio) {
-    carrito.push({ nombre: nombre, precio: precio });
+function agregarAlCarrito(nombre,cantidad, precio) {
+    carrito.push({ nombre: nombre,cantidad:cantidad, precio: precio });
     guardarCarrito();
 }
 
