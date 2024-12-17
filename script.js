@@ -1,9 +1,12 @@
-// script.js
+// script.js saludo inicial 
 
 function mostrarMensaje() {
-    alert('¡Hola, bienvenido a Alfajores Arami!');
+    alert('¡Hola, Te damos la bienvenida a Alfajores Arami!');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    mostrarMensaje();
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        mostrarMensaje();
+    }
 });
+
