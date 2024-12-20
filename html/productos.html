@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfajores Arami</title>
+</head>
+<body>
+    <header class="header-content">
+        <div class="logo">
+          <img src="Imagenes\Logo2-removebg-preview.png" alt="Logo" width="100" height="100">
+          <div class="header-text">
+            <h1>Alfajores Arami</h1>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html">Inicio</a>
+          <a href="productos.html">Productos</a>
+          <a href="login.html">Mi cuenta</a>
+          <a href="registro.html">Registro</a>
+          <a href="contacto.html">Contacto</a>
+          <a href="carritodecompras.html">Mis compras</a>
+        </nav>
+      </header>
+            <main>
+                <section id="inicio">
+                    <h2>Nuestros Alfajores Arami</h2>
+                    <p>Disfrute de los más deliciosos Alfajores Regionales.</p>
+                  
+                </section>
+            
+                    <section id="productos">
+                        <h2>Nuestros productos</h2>
+                        <aside class="price-list">
+                            <h2><strong> Lista de Precios</strong></h2>
+                            <ul>
+                              <li><h3>Alfajor de Maicena</h3></li>
+                              <ul>
+                                <li>Media Docena: $6.000</li>
+                                <li>1 Docena: $12.000</li>
+                                <li>2 Docenas: $24.000</li>
+                              </ul>
+                              <li><h3>Alfajor Marplatense</h3></li>
+                              <ul>
+                                <li>Media Docena: $9.000</li>
+                                <li>1 Docena: $18.000</li>
+                                <li>2 Docenas: $36.000</li>
+                              </ul>
+                              <li><h3>Alfajor Cordobés</h3></li>
+                              <ul>
+                                <li>Media Docena: $8.500</li>
+                                <li>1 Docena: $17.000</li>
+                                <li>2 Docenas: $34.000</li>
+                              </ul>
+                              <li><h3>Colaciones</h3></li>
+                              <ul>
+                                <li>Media Docena: $10.000</li>
+                                <li>1 Docena: $20.000</li>
+                                <li>2 Docenas: $40.000</li>
+                              </ul>
+                            </ul>
+                          </aside>
+                        <ul class="productos-lista">
+                          
+                            <li>
+                            <img src="Imagenes/maicena.jpg" alt="Alfajores de Maicena">
+                            <h3>Alfajor de Maicena</h3>
+                            <p>Descripción </p>
+                            <div class="product-box"><p>Los alfajores de maicena son un clásico de la pastelería argentina. Estos alfajores delicados y suaves están hechos con una masa de maicena que se deshace en la boca, rellenos de dulce de leche y cubiertos con una generosa capa de coco rallado. Cada bocado es un deleite de sabores y texturas que evoca los recuerdos más dulces de la infancia.</p> 
+                            </div>
+                            <label for="maicena">Cantidad:</label> 
+                            <select id="maicena" name="maicena" class="quantity"> 
+                                <option value="0">Seleccionar</option> 
+                                <option value="6">Media Docena</option> 
+                                <option value="12">1 Docena</option> 
+                                <option value="24">2 Docenas</option> 
+                            </select>
+                            <label for="maicena">Precio</label>
+                            <select name="maicena" id="maicena" class="precio">
+                                <option value="6">$6.000</option> 
+                                <option value="12">$12.000</option> 
+                                <option value="24">$24.000</option>
+                            </select>
+                            
+                                
+                            <button onclick="addToCart('Alfajor de Maicena' ,Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button> 
+                            <button onclick="irAMisCompras()"><a  href="carritodecompras.html"> Ver mis compras</a><br></button>
+                          </div>
+
+                            
+                          
+                        </li>
+                        
+                        <li>
+                            <img src="Imagenes/mdq.jpg" alt="Alfajores Marplatenses">
+                            <h3>Alfajores Marplatenses</h3>
+                            <div class="product-box"><p>El alfajor marplatense es famoso por su inigualable combinación de sabores. Estos alfajores están formados por dos galletas esponjosas rellenas de dulce de leche, bañadas en un suave chocolate semi amargo que se derrite en la boca. Originarios de Mar del Plata, estos alfajores son un verdadero símbolo de la tradición repostera argentina, perfectos para cualquier ocasión.</p> 
+                            </div>
+                            <label for="mdq">Cantidad:</label>
+                            <select id="mdq" name="mdq" class="quantity">
+                                <option value="0">Seleccionar</option> 
+                                <option value="6">Media Docena</option> 
+                                <option value="12">1 Docena</option> 
+                                <option value="24">2 Docenas</option>
+                                    </select>
+                                <select name="mdq" id="mdq" class="precio">
+                                        <option value="6">$9.000</option> 
+                                        <option value="12">$18.000</option> 
+                                        <option value="24">$36.000</option>
+                                </select>
+                          
+                          <button onclick="addToCart('Alfajores Marplatenses',Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button>
+                          <button onclick="irAMisCompras()"><a  href="carritodecompras.html"> Ver mis compras</a><br></button> 
+                            </div>
+                            
+                        </li>
+                        
+                        <li>
+                            <img src="Imagenes/cordobeces1.jpg" alt="Alfajores Cordobeces">
+                            <h3>Alfajores Cordobeces</h3>
+                            <p>Descripción </p>
+                            <div class="product-box"><p>Los alfajores cordobeses destacan por su particular textura y sabor. Con una receta que incluye harina de trigo y miel, estos alfajores están rellenos de una generosa capa de dulce de leche y cubiertos con un glaseado blanco que les da un toque distintivo. Son conocidos por su equilibrio perfecto entre dulzura y suavidad, ofreciendo una experiencia de sabor auténticamente argentina.</p>
+                            </div>
+                            <label for="cordobeces">Cantidad:</label> 
+                            <select id="cordobeces" name="cordobeces" class="quantity"> 
+                                <option value="0">Seleccionar</option> 
+                                <option value="6">Media Docena</option> 
+                                <option value="12">1 Docena</option> 
+                                <option value="24">2 Docenas</option> 
+                            </select>
+                            <label for="cordobeces">Precio</label>
+                            <select name="cordobeces" id="cordobeces" class="precio">
+                                <option value="6">$8.500</option> 
+                                <option value="12">$17.000</option> 
+                                <option value="24">$34.000</option>
+                            </select>
+                             
+                              <button onclick="addToCart('Alfajores Cordobeces',Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button>
+                              <button onclick="irAMisCompras()"><a  href="carritodecompras.html"> Ver mis compras</a><br></button>  
+                            </div>
+                            
+                        
+                        </li>
+                        <li>
+                            <img src="Imagenes/colaciones.jpg" alt="colaciones">
+                            <h3>Colaciones</h3>
+                            <p>Descripción </p>
+                            <div class="product-box"><p>Las colaciones cordobesas son un manjar típico de la región de Córdoba. Estas delicadezas están hechas con una masa fina y crujiente, rellenas de dulce de leche y cubiertas con un glaseado de azúcar. Su combinación de texturas y el dulce sabor a caramelo las hacen irresistibles. Perfectas para acompañar un buen café o como un capricho dulce en cualquier momento del día.</p>
+                            </div>
+                            <label for="colaciones">Cantidad:</label>
+                            <select id="colaciones" name="colaciones" class="quantity">
+                                <option value="0">Seleccionar</option> 
+                                <option value="6">Media Docena</option> 
+                                <option value="12">1 Docena</option> 
+                                <option value="24">2 Docenas</option>
+                                <label for="colaciones">Precio</label>
+                                </select>
+                                <select name="colaciones" id="colaciones" class="precio">
+                                        
+                                        <option value="6">$10.000</option> 
+                                        <option value="12">$20.000</option> 
+                                        <option value="24">$40.000</option>
+                                </select>
+                            </select>
+                            
+                              <button onclick="addToCart('Colaciones',Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button>
+                              <button onclick="irAMisCompras()"><a  href="carritodecompras.html"> Ver mis compras</a><br></button> 
+                            </div>
+                            
+                            </li>
+                            </ul>
+                        </section>
+                        
+                        
+                <section id="contacto">
+                    <h2>Contacto</h2>
+                    <p>Si tiene alguna duda o necesita más información, por favor <a href="contacto.html">contactenos.</a></p>
+                    
+            </main>
+            <footer>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <nav>
+                  <p>Alfajores Arami &copy; 2024</p>
+                  <p>Todos los derechos reservados</p>
+                </nav>
+            </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
