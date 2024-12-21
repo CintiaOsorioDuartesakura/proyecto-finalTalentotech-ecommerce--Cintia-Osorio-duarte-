@@ -1,8 +1,10 @@
 // script.js saludo inicial 
 
 
-function mostrarMensaje() {
-    alert('¡Hola, Te damos la Bienvenida a Alfajores Arami!');
+
+function mostrarMensaje(){
+    alert('��Hola, Te damos la Bienvenida a Alfajores Arami!');
+
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -22,6 +24,7 @@ let Productos = [
         "description" : "Los alfajores de maicena son un clásico de la pastelería argentina. Estos alfajores delicados y suaves están hechos con una masa de maicena que se deshace en la boca, rellenos de dulce de leche y cubiertos con una generosa capa de coco rallado. Cada bocado es un deleite de sabores y texturas que evoca los recuerdos más dulces de la infancia."
         },
        
+
     { cordobeces: 'cordobeces', precio: 200 },
     { nombre: 'Producto 3', precio: 300 },
     { nombre: 'Producto 4', precio: 400 },
