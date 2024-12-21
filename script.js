@@ -52,6 +52,37 @@ let Productos = [
    
 ];
 
+function calcularPrecio() {
+    const cantidad = parseInt(document.getElementById('cantidad').value, 10);
+    let precio = 0;
+  
+    if (cantidad === 6) {
+      precio = 8500;
+    } else if (cantidad === 12) {
+      precio = 17000;
+    } else if (cantidad === 24) {
+      precio = 34000;
+    }
+  
+    document.getElementById('precio').textContent = precio;
+  }
+  
+  function calcularTotal() {
+    const cantidad = parseInt(document.getElementById('cantidad').value, 10);
+    let total = 0;
+  
+    if (cantidad === 6) {
+      total = 8500;
+    } else if (cantidad === 12) {
+      total = 17000;
+    } else if (cantidad === 24) {
+      total = 34000;
+    }
+  
+    document.getElementById('total').textContent = total;
+  }
+  
+
 function agregarAlCarrito(nombre,cantidad, precio) {
     carrito.push({ nombre: nombre,cantidad:cantidad, precio: precio });
     guardarCarrito();
