@@ -3,7 +3,7 @@
 
 
 
-    alert('��Hola, Te damos la Bienvenida a Alfajores Arami!');
+    alert('Hola, Te damos la Bienvenida a Alfajores Arami!');
 
 
 
