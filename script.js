@@ -2,7 +2,7 @@
 
 
 function mostrarMensaje() {
-    alert('¡Hola, Te damos la bienvenida a Alfajores Arami!');
+    alert('¡Hola, Te damos la Bienvenida a Alfajores Arami!');
 }
 
 document.addEventListener('DOMContentLoaded', function() {
