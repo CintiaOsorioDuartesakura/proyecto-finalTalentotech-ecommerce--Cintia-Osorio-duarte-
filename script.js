@@ -2,10 +2,10 @@
 
 
 
-function mostrarMensaje(){
+
     alert('��Hola, Te damos la Bienvenida a Alfajores Arami!');
 
-}
+
 
 document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
