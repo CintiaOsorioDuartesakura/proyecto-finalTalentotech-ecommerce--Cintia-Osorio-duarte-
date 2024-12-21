@@ -37,16 +37,29 @@
         </div> 
         <form id="compraForm"> 
           <label for="cantidad">Cantidad:</label> 
-          <select id="cantidad" name="cantidad" class="quantity" onchange="actualizarPrecio()"> 
+          <select id="cantidad" name="cantidad" class="quantity" onchange="calcularPrecio()"> 
             <option value="0">Seleccionar</option> 
             <option value="6">Media Docena</option> 
             <option value="12">1 Docena</option> 
             <option value="24">2 Docenas</option> 
           </select> 
-            <h3>Precio: $<span id="precio">0
+         <label for="precio ">precio:
+          <select name="precio" id="precio" class="price" onchange="elegirPrecio">
+            <option value="6">$9000</option> 
+            <option value="12">$18000</option> 
+            <option value="24">$36000</option>
+          </select>
+         </label>
+          <h3>Precio: $
+            <span id="precio">
 
-          </span>
-        </h3> 
+            </span>
+          </h3> 
+          <button type="button" onclick="calcularTotal()">Calcular Total</button> 
+        </form> <h2>Total: $<span id="total">
+
+    </span>
+      </h2>
           <button type="button" onclick="calcularTotal()">Calcular Total</button> 
         </form> 
         <h2>Total: $<span id="total">0</span></h2>
