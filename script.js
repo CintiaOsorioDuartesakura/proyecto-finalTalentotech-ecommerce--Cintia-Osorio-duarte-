@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 // script.js
-
+//
 let Productos = [
 
     { "id":maicena,
@@ -51,6 +51,142 @@ let Productos = [
     }
    
 ];
+for (let i = 0; i < Productos.length; i++) {
+    const producto = Productos[i];
+    const productoElemento = document.createElement('div');
+    productoElemento.classList.add('producto');
+    const nombreElemento = document.createElement('h2');
+    nombreElemento.textContent = producto.name;
+    productoElemento.appendChild(nombreElemento);
+    const cantidadElemento = document.createElement('select');
+    cantidadElemento.classList.add('cantidad');
+    producto.cantidad.forEach(cantidad => {
+        const opcionElemento = document.createElement('option');
+        opcionElemento.textContent = cantidad;
+        cantidadElemento.appendChild(opcionElemento);
+    }); 
+    productoElemento.appendChild(cantidadElemento);
+    const precioElemento = document.createElement('p');
+    precioElemento.textContent = `$${producto.price}`;
+    productoElemento.appendChild(precioElemento);
+    const agregarCarritoButton = document.createElement('button');
+    agregarCarritoButton.textContent = 'Agregar al carrito';
+    agregarCarritoButton.addEventListener('click', () => {
+        agregarAlCarrito(producto.name, cantidadElemento.value, producto.price);
+        mostrarCarrito();
+    }); 
+    productoElemento.appendChild(agregarCarritoButton);
+    document.getElementById('productos').appendChild(productoElemento);
+}
+
+let carrito = [];
+
+function mostrarMensaje() {
+    const mensajeElemento = document.getElementById('mensaje');
+    mensajeElemento.textContent = 'Bienvenido a Alfajores Arami! Este es un sitio de venta de alfajores argentinos. Disfruta de nuestros productos y encuentra la mejor opción para tu comida favorita.';
+}   else {
+    const mensajeElemento = document.getElementById('mensaje');
+    mensajeElemento.textContent = 'Bienvenido a Alfajores Arami! Este es un sitio de venta de alfajores argentinos. Disfruta de nuestros productos y encuentra la mejor opción para tu comida favorita.';
+}
+
+cargarCarrito();
+mostrarCarrito();
+
+function vaciarCarrito() {
+    carrito = [];
+    guardarCarrito();
+    mostrarCarrito();
+}
+
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    guardarCarrito();
+    mostrarCarrito();
+}
+
+function calcularSubtotal(index) {
+    const cantidad = carrito[index].cantidad;
+    const precio = carrito[index].precio;
+    return cantidad * precio;
+}
+
+function calcularTotal() {
+    let total = 0;
+    carrito.forEach(item => {
+        total += calcularSubtotal(carrito.indexOf(item));
+    });
+    return total;
+}
+
+function mostrarTotal() {
+    const totalElemento = document.getElementById('total');
+    totalElemento.textContent = `Total: $${calcularTotal()}`;
+}
+
+function mostrarCarrito() {
+    const carritoElemento = document.getElementById('carrito');
+    const totalElemento = document.getElementById('total');
+    carritoElemento.innerHTML = '';
+    let total = 0;
+    carrito.forEach(item => {
+        const itemElemento = document.createElement('div');
+        itemElemento.textContent = `${item.nombre} - $${item.precio}`;
+        carritoElemento.appendChild(itemElemento);
+        const subtotalElemento = document.createElement('div');
+        subtotalElemento.textContent = `Subtotal: $${calcularSubtotal(carrito.indexOf(item))}`;
+        itemElemento.appendChild(subtotalElemento);
+        const eliminarButton = document.createElement('button');
+        eliminarButton.textContent = 'Eliminar';
+        eliminarButton.addEventListener('click', () => {
+            eliminarDelCarrito(carrito.indexOf(item));
+        });
+        itemElemento.appendChild(eliminarButton);
+        total += calcularSubtotal(carrito.indexOf(item));
+        mostrarTotal();
+    });
+}
+
+document.getElementById('vaciarCarritoButton').addEventListener('click', vaciarCarrito);
+
+function filtrarProductos(event) {
+    const filtro = event.target.value;
+    const productosElemento = document.getElementById('productos');
+    productosElemento.innerHTML = '';
+    Productos.forEach(producto => {
+        if (producto.name.includes(filtro)) {
+            const productoElemento = document.createElement('div');
+            productoElemento.classList.add('producto');
+            const nombreElemento = document.createElement('h2');
+            nombreElemento.textContent = producto.name;
+            productoElemento.appendChild(nombreElemento);
+            const cantidadElemento = document.createElement('select');
+            cantidadElemento.classList.add('cantidad');
+            producto.cantidad.forEach(cantidad => {
+                const opcionElemento = document.createElement('option');
+                opcionElemento.textContent = cantidad;
+                cantidadElemento.appendChild(opcionElemento);
+            });
+            productoElemento.appendChild(cantidadElemento);
+            const precioElemento = document.createElement('p');
+            precioElemento.textContent = `$${producto.price}`;
+            productoElemento.appendChild(precioElemento);
+            const agregarCarritoButton = document.createElement('button');
+            agregarCarritoButton.textContent = 'Agregar al carrito';
+            agregarCarritoButton.addEventListener('click', () => {
+                agregarAlCarrito(producto.name, cantidadElemento.value, producto.price);
+                mostrarCarrito();
+            });
+            productoElemento.appendChild(agregarCarritoButton);
+            productosElemento.appendChild(productoElemento);
+        }
+    }
+    );
+}
+
+document.getElementById('filtroInput').addEventListener('input', filtrarProductos);
+
+// Carrito LocalStorage
+
 
 
 
