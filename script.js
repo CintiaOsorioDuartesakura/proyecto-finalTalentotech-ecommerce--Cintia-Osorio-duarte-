@@ -49,7 +49,7 @@ let Productos = [
         "img": "colaciones.jpg",
         "description" : "Los alfajores argentinos son una maravilla de la pastelería argentina. Estos alfajores delicados y suaves están hechos con una masa de maicena que se deshace en la boca, rellenos de dulce de leche y cubiertos con una generosa capa de coco rallado. Cada bocado es un deleite de sabores y texturas que evoca los recuerdos más dulces de la infancia."
     }
-    { nombre: 'Producto 5', precio: 500 }
+   
 ];
 
 function agregarAlCarrito(nombre,cantidad, precio) {
