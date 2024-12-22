@@ -1,19 +1,15 @@
 // script.js saludo inicial 
 
-document.addEventListener('DOMContentLoaded', () => {
+
     // Mostrar el saludo inicial al cargar la página
     alert('¡Hola, bienvenido a Alfajores Arami!');
+    // Agregar un evento al botón de saludo para que se muestre al hacer click
+    document.getElementById('saludo').addEventListener('click', mostrarSaludo);
+    // Función para mostrar el saludo
+    function mostrarSaludo() {  return document.getElementById('saludo').textContent = '¡Hola, bienvenido a Alfajores Arami!'; }    
+    
 
-
-    // Agregar eventos de mouseover y mouseout al nav
-    (document.getElementById('mainNav')).addEventListener('mouseover', () => {
-        (document.getElementById('mainNav')).style.backgroundColor = '#e9ecef'; // Cambia el color de fondo al pasar el mouse
-    });
-
-    (document.getElementById('mainNav')).addEventListener('mouseout', () => {
-        (document.getElementById('mainNav')).style.backgroundColor = '#f8f9fa'; // Vuelve al color original cuando el mouse sale
-    });
-});
+    
 
 
 
