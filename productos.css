@@ -1,4 +1,4 @@
-body {
+.productos body {
     font-family: 'Roboto', sans-serif;
     background-color: #f9f9f9;
     color: #333;
@@ -74,6 +74,6 @@ body {
   }
   
   button:hover {
-    background-color: #4d23b1;
+    background-color: #3600b3;
   }
   
