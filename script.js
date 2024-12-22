@@ -3,12 +3,7 @@
 
     // Mostrar el saludo inicial al cargar la página
     alert('¡Hola, bienvenido a Alfajores Arami!');
-    // Agregar un evento al botón de saludo para que se muestre al hacer click
-    document.getElementById('saludo').addEventListener('click', mostrarSaludo);
-    // Función para mostrar el saludo
-    function mostrarSaludo() {  return document.getElementById('saludo').textContent = '¡Hola, bienvenido a Alfajores Arami!'; }    
     
-
     
 
 
