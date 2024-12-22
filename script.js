@@ -78,6 +78,26 @@ for (let i = 0; i < Productos.length; i++) {
     productoElemento.appendChild(agregarCarritoButton);
     document.getElementById('productos').appendChild(productoElemento);
 }
+//Insertar cards desde flexbox dentro del DOM
+// Selecciono id productos
+let contenedorProductos = document.getElementById('productos');
+
+let contenedorIndividual = document.createElement('div');
+contenedorIndividual.classList.add('card_container');
+//Cargar productos
+document.addEventListener("DOMContentLoaded", (event) => {
+    Productos.forEach(producto => {
+        contenedorIndividual.innerHTML += 
+
+        `<div class="card">
+            <img src="${producto.img}" alt="${producto.name}">
+            <h3>${producto.name}</h3>
+            <p>Cantidad: ${producto.cantidad[0]}</p>
+            <p>Precio: $${producto.price}</p>
+            <button onclick="agregarAlCarrito('${producto.name}', '${producto.cantidad[0]}', ${producto.price})">Agregar al carrito</button>
+        </div>`;
+    });
+    
 
 let carrito = [];
 
@@ -186,6 +206,7 @@ function filtrarProductos(event) {
 document.getElementById('filtroInput').addEventListener('input', filtrarProductos);
 
 // Carrito LocalStorage
+
 
 
 
