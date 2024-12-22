@@ -2,7 +2,9 @@
 
 
     // Mostrar el saludo inicial al cargar la página
-    alert('¡Hola, bienvenido a Alfajores Arami!');
+    alert("Bienvenido a nuestra tienda de alfajores. ¡Esperamos que disfrutes tu visita!");
+    
+
     
     
 
