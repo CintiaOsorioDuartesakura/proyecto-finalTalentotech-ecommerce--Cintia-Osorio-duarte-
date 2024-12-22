@@ -1,18 +1,17 @@
 // script.js saludo inicial 
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     // Mostrar el saludo inicial al cargar la página
     alert('¡Hola, bienvenido a Alfajores Arami!');
 
-    const nav = document.getElementById('mainNav');
 
     // Agregar eventos de mouseover y mouseout al nav
-    nav.addEventListener('mouseover', () => {
-        nav.style.backgroundColor = '#e9ecef'; // Cambia el color de fondo al pasar el mouse
+    (document.getElementById('mainNav')).addEventListener('mouseover', () => {
+        (document.getElementById('mainNav')).style.backgroundColor = '#e9ecef'; // Cambia el color de fondo al pasar el mouse
     });
 
-    nav.addEventListener('mouseout', () => {
-        nav.style.backgroundColor = '#f8f9fa'; // Vuelve al color original cuando el mouse sale
+    (document.getElementById('mainNav')).addEventListener('mouseout', () => {
+        (document.getElementById('mainNav')).style.backgroundColor = '#f8f9fa'; // Vuelve al color original cuando el mouse sale
     });
 });
 
@@ -120,7 +119,7 @@ contenedorIndividual.classicList.add ('card_container');
 
 
 // cargar productos
-document.addEventListener ( "DOMContentLoaded", (event) => {
+document.addEventListener ( "DOMContentLoaded", () => {
     Productos.forEach(producto => {
        contenedorIndividual.innerHTML += `
         <div class="card">
