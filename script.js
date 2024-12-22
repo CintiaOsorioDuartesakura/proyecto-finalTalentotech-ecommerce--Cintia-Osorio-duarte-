@@ -97,7 +97,29 @@ document.addEventListener("DOMContentLoaded", (event) => {
             <button onclick="agregarAlCarrito('${producto.name}', '${producto.cantidad[0]}', ${producto.price})">Agregar al carrito</button>
         </div>`;
     });
-    
+    <form id="my_form${producto.id}">
+        <div>
+          <output id="nombre" name="nombre">${producto.name}</output>
+          <br>
+          <output id="precio" name="precio">${producto.price}</output>
+          <br>
+          <button id="btnMasInfo${producto.id}" class="button" onclick="masInfo(${producto.id})">+ info</button>
+          <div id="botonera${producto.id}">
+            <button onclick="comprar(${producto.id})" class="button" value="Comprar">Comprar</button>
+          </div>  
+          <div>
+            <output id="description${producto.id}" class="description">
+              ${producto.description}
+              <br>
+                <button onclick="comprar(${producto.id})" class="button" value="Comprar">Comprar</button>
+            </output>
+          </div>
+        </div>
+      </div>
+    `;
+    contenedorProductos.append(contenedorIndividual);
+  });
+});
 
 let carrito = [];
 
