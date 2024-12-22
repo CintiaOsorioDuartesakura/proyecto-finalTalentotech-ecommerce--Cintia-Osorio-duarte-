@@ -1,20 +1,21 @@
 // script.js saludo inicial 
 
-document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-        mostrarMensaje();
-    }
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Mostrar el saludo inicial al cargar la página
+    alert('¡Hola, bienvenido a Alfajores Arami!');
+
+    const nav = document.getElementById('mainNav');
+
+    // Agregar eventos de mouseover y mouseout al nav
+    nav.addEventListener('mouseover', () => {
+        nav.style.backgroundColor = '#e9ecef'; // Cambia el color de fondo al pasar el mouse
+    });
+
+    nav.addEventListener('mouseout', () => {
+        nav.style.backgroundColor = '#f8f9fa'; // Vuelve al color original cuando el mouse sale
+    });
 });
-
-
-
-    alert('Hola, Te damos la Bienvenida a Alfajores Arami!');
-    alert('Estamos para ayudarte a elegir el alfajor que más te guste, si tenes alguna duda, no dudes en consultarnos!');
-    alert('Que disfrutes tu visita!');
-    alert('Aqui podras encontrar los mejores alfajores de la Argentina!');
-    alert('Si necesitas mas informacion sobre algun alfajor, no dudes en contactarnos!');
-    alert('Gracias por visitarnos!');
-    alert('Que tengas un buen dia!');
+n dia!');
 
     // script.js
     const carrito = [];
