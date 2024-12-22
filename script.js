@@ -122,7 +122,7 @@ contenedorIndividual.classicList.add ('card_container');
 
 
 // cargar productos
-document.addEventListener ( "DOMContentLoaded", () => {
+document.addEventListener  ("DOMContentLoaded", () => {
     Productos.forEach(producto => {
        contenedorIndividual.innerHTML += `
         <div class="card">
