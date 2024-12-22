@@ -4,9 +4,7 @@
 
 
     alert('Hola, Te damos la Bienvenida a Alfajores Arami!');
-    alert('Estamos felices de que estés aquí, esperamos que disfrutes de nuestros productos!');
-    alert('Recuerda que puedes realizar tu pedido en la sección de productos');
-
+    
     //
     document.addEventListener('DOMContentLoaded', function() {
     if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
@@ -142,9 +140,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }   else {  return false;  }    
 );
   }
-    localStorage.setItem('productos', JSON.stringify(Productos));   
-    });  
-      //
+    
 //
 
 
