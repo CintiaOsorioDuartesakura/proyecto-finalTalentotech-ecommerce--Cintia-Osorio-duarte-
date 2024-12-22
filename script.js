@@ -2,8 +2,18 @@
 
 
     // Mostrar el saludo inicial al cargar la página
-    alert("Bienvenido a nuestra tienda de alfajores. ¡Esperamos que disfrutes tu visita!");
-    
+    // script.js
+
+function mostrarMensaje() {
+    alert('¡Hola, bienvenido a Alfajores Arami!');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        mostrarMensaje();
+    }
+});
+
 
     
     
