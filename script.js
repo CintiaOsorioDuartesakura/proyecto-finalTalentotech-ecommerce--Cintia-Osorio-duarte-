@@ -1,10 +1,213 @@
 // script.js saludo inicial 
 
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
+        mostrarMensaje();
+    }
+});
 
 
 
     alert('Hola, Te damos la Bienvenida a Alfajores Arami!');
+    alert('Estamos para ayudarte a elegir el alfajor que más te guste, si tenes alguna duda, no dudes en consultarnos!');
+    alert('Que disfrutes tu visita!');
+    alert('Aqui podras encontrar los mejores alfajores de la Argentina!');
+    alert('Si necesitas mas informacion sobre algun alfajor, no dudes en contactarnos!');
+    alert('Gracias por visitarnos!');
+    alert('Que tengas un buen dia!');
+
+    // script.js
+    const carrito = [];
     
+    function guardarCarrito() {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+    
+    function cargarCarrito() {
+        const carritoStr = localStorage.getItem('carrito');
+        if (carritoStr) {
+            carrito = JSON.parse(carritoStr);
+        }
+    }
+    
+    cargarCarrito();
+ // script.js
+ const precios = {
+    cordobeses: {
+      6: 8500,
+      12: 17000,
+      24: 34000
+    },
+    marplatenses: {
+      6: 9000,
+      12: 18000,
+      24: 36000
+    }
+    maicena: {
+        6: 6000,
+        12: 12000,
+        24: 24000
+        },
+        colaciones: {
+            6: 10000,
+            12: 20000,
+            24: 40000
+            }
+
+  };
+  
+  document.querySelectorAll('.quantity').forEach(select => {
+    select.addEventListener('change', actualizarPrecio);
+  });
+  
+  function actualizarPrecio(event) {    
+    const select = event.target;
+    const product = select.closest('.product');
+    const tipoProducto = select.id.split('-')[0];
+    const cantidad = parseInt(select.value, 10);
+    const precio = precios[tipoProducto][cantidad] || 0;
+    product.querySelector('.precio').textContent = precio;
+  }
+  
+  function agregarAlCarrito(event) {
+    const product = event.target.closest('.product');
+    const tipoProducto = product.querySelector('.quantity').id.split('-')[0];
+    const cantidad = parseInt(product.querySelector('.quantity').value, 10);
+    const precio = precios[tipoProducto][cantidad] || 0;
+    const producto = {
+      tipo: tipoProducto,
+      cantidad,
+      precio
+    };
+    carrito.push(producto);
+    guardarCarrito();
+  }
+  
+  document.querySelectorAll('.agregar-carrito').forEach(boton => {
+    boton.addEventListener('click', agregarAlCarrito);
+  });
+  
+  function generarCarritoHTML() {
+    const carritoHTML = document.getElementById('carrito');
+    carritoHTML.innerHTML = '';
+    carrito.forEach(producto => {
+      const productoHTML = document.createElement('div');
+      productoHTML.textContent = `${producto.tipo} - ${producto.cantidad} - ${producto.precio}`;
+      carritoHTML.appendChild(productoHTML);
+    });
+  }
+  
+  generarCarritoHTML();
+    const totalElemento = document.getElementById('total');
+    totalElemento.textContent = carrito.reduce((total, producto) => total + producto.precio, 0);
+ 
+    // script.js
+    const carrito = [];
+    
+    function guardarCarrito() {
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    }
+    
+    function cargarCarrito() {
+        const carritoStr = localStorage.getItem('carrito');
+        if (carritoStr) {
+            carrito = JSON.parse(carritoStr);
+        }
+    }
+    
+    cargarCarrito();
+ // script.js
+    const precios = {
+        cordobeses: {
+        6: 8500,
+        12: 17000,
+        24: 34000
+        },
+        marplatenses: {
+        6: 9000,
+        12: 18000,
+        24: 36000
+        }
+        maicena: {
+            6: 6000,
+            12: 12000,
+            24: 24000
+            },
+            colaciones: {
+                6: 10000,
+                12: 20000,
+                24: 40000
+                }
+    
+    };
+    
+    document.querySelectorAll('.quantity').forEach(select => {
+        select.addEventListener('change', actualizarPrecio);
+    });
+    
+    function actualizarPrecio(event) {    
+        const select = event.target;
+        const product = select.closest('.product');
+        const tipoProducto = select.id.split('-')[0];
+        const cantidad = parseInt(select.value, 10);
+        const precio = precios[tipoProducto][cantidad] || 0;
+        product.querySelector('.precio').textContent = precio;
+    }
+    
+    function agregarAlCarrito(event) {
+        const product = event.target.closest('.product');
+        const tipoProducto = product.querySelector('.quantity').id.split('-')[0];
+        const cantidad = parseInt(product.querySelector('.quantity').value, 10);
+        const precio = precios[tipoProducto][cantidad] || 0;
+        const producto = {
+        tipo: tipoProducto,
+        cantidad,
+        precio
+        };
+        carrito.push(producto);
+        guardarCarrito();
+    }
+    
+    document.querySelectorAll('.agregar-carrito').forEach(boton => {
+        boton.addEventListener('click', agregarAlCarrito);
+    });
+    
+    function generarCarritoHTML() {
+        const carritoHTML = document.getElementById('carrito');
+        carritoHTML.innerHTML = '';
+        carrito.forEach(producto => {
+        const productoHTML = document.createElement('div');
+        productoHTML.textContent = `${producto.tipo} - ${producto.cantidad} - ${producto.precio}`;
+        carritoHTML.appendChild(productoHTML);
+        });
+    }
+    
+    generarCarritoHTML();
+        const totalElemento = document.getElementById('total');
+        totalElemento.textContent = carrito.reduce((total, producto) => total + producto.precio, 0);
+    
+        // script.js
+        const carrito = [];
+        
+        function guardarCarrito() {
+            localStorage.setItem('carrito', JSON.stringify(carrito));
+        }
+        
+        function cargarCarrito() {
+            const carritoStr = localStorage.getItem('carrito');
+            if (carritoStr) {
+                carrito = JSON.parse(carritoStr);
+            }
+        }
+        
+        cargarCarrito();
+
+
+
+
+
+
+
     
     
 
@@ -130,7 +333,27 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-// mostrar mensaje de bienvenida
+FormControlLabel.addEventListener('click', function() {
+    alert('Gracias por tu compra!');
+    alert('Tu compra ha sido realizada con exito!');
+    alert('Te enviaremos un mail con los detalles de tu compra!');
+    alert('Gracias por elegirnos!');
+    alert('Que tengas un buen dia!');
+});
+
+function masInfo(id) {
+    let descripcion = document.getElementById(`description${id}`);
+    let botonera = document.getElementById(`botonera${id}`);
+    descripcion.style.display = descripcion.style.display === 'none' ? 'block' : 'none';
+    botonera.style.display = botonera.style.display === 'none' ? 'block' : 'none';
+}
+
+function comprar(id) {
+    alert(`Gracias por tu compra de ${Productos[id].name}`);
+}
+
+// script.js
+
 
 
 
