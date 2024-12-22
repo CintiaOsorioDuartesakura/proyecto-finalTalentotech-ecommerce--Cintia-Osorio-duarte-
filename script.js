@@ -24,6 +24,17 @@ const precios = {
       12: 18000,
       24: 36000
     }
+    maicena: {
+        6: 6000,
+        12: 12000,
+        24: 24000
+        },
+        colaciones: {
+            6: 10000,
+            12: 20000,
+            24: 40000
+            }
+
   };
   
   document.querySelectorAll('.quantity').forEach(select => {
@@ -118,6 +129,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }   else {  return false;  }    
 );
   }
+    localStorage.setItem('productos', JSON.stringify(Productos));   
+    });  
       //
 //
 
