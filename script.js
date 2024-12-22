@@ -61,48 +61,31 @@ contenedorIndividual.classicList.add ('card_container');
 // cargar productos
 document.addEventListener("DOMContentLoaded", (event) => {
     Productos.forEach(producto => {
-      contenedorIndividual.innerHTML += `
+       contenedorIndividual.innerHTML += `
         <div class="card">
-        <form id="my_form${producto.id}">
-          <div>
-            <output id="nombre" name="nombre">${producto.name}</output>
-            <br>
-            <output id="precio" name="precio">${producto.price}</output>
-            <br>
-            <button id="btnMasInfo${producto.id}" class="button" onclick="masInfo(${producto.id})">+ info</button>
-            <div id="botonera${producto.id}">
-              <button onclick="comprar(${producto.id})" class="button" value="Comprar">Comprar</button>
-            </div>  
-            <div>
-              <output id="description${producto.id}" class="description">
-                ${producto.description}
-                <br>
-                  <button onclick="comprar(${producto.id})" class="button" value="Comprar">Comprar</button>
-              </output>
+           <img src="./assets/img/${producto.img}" class="card-img-top" alt="${producto.name}">
+          <div class="card-body">
+            <h5 class="card-title">${producto.name}</h5>
+            <p class="card-text">${producto.description}</p>
+            <p class="card-text">Precio: $${producto.price}</p>
+            <p class="card-text">Cantidad: ${producto.cantidad}</p>
+            <button id="btnMasInfo${producto.id}" onclick="masInfo(${producto.id})" class="btn btn-primary">Más información</button>
+            <div id="description${producto.id}" style="display: none;">
+              <p>${producto.description}</p>
+            </div>
+            <div id="botonera${producto.id}" style="display: none;">
+              <button onclick="comprar(${producto.id})" class="btn btn-success">Comprar</button>
+              <button onclick="masInfo(${producto.id})" class="btn btn-danger">Cerrar</button>
             </div>
           </div>
         </div>
       `;
-      contenedorProductos.append(contenedorIndividual);
-    });
-  });
+    }   else {  return false;  }    
+);
+  }
+      //
 //
-function masInfo(id){
-Event.preventDefault();
-let idx= id.toString();
-let param = 'description' + idx;
-  let btnMasInfo = 'botonera' + idx;
-  let btnComprar = 'btnMasInfo' + idx;
-  let btnComprarDesc = 'comprar' + idx;
 
-
-    document.getElementById(`description${id}`).style.display = 'block';
-    document.getElementById(`btnMasInfo${id}`).style.display = 'none';
-    document.getElementById(`botonera${id}`).style.display = 'block';
-  }
-  function comprar(id){
-    alert(`Has seleccionado comprar al alfajor ${Productos[id-1].name}`);
-  }
 
 
 // mostrar mensaje de bienvenida
