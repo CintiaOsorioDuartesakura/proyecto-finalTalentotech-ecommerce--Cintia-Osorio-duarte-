@@ -5,23 +5,8 @@
 
     alert('Hola, Te damos la Bienvenida a Alfajores Arami!');
     
-    //
-    document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.pathname === '/index.html' || window.location.pathname === '/') {
-        mostrarMensaje();
-    }
-});
-document.addEventListener('DOMContentLoaded', (event) => {
-    const nav = document.getElementById('mainNav');
-
-    nav.addEventListener('mouseover', () => {
-        nav.style.backgroundColor = '#e9ecef'; // Cambia el color de fondo al pasar el mouse
-    });
-
-    nav.addEventListener('mouseout', () => {
-        nav.style.backgroundColor = '#f8f9fa'; // Vuelve al color original cuando el mouse sale
-    });
-});
+    
+    
 
 // script.js
 const precios = {
