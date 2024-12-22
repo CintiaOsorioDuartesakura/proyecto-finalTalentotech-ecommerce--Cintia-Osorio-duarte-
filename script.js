@@ -60,7 +60,7 @@ contenedorIndividual.classicList.add ('card_container');
 
 // cargar productos
 document.addEventListener("DOMContentLoaded", (event) => {
-    productos.forEach(producto => {
+    Productos.forEach(producto => {
       contenedorIndividual.innerHTML += `
         <div class="card">
         <form id="my_form${producto.id}">
