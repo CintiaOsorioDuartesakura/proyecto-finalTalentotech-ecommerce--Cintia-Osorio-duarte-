@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-   
+
 
 
 
@@ -30,15 +30,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // script.js
 const precios = {
     cordobeses: {
-      6: 8500,
-      12: 17000,
-      24: 34000
+    6: 8500,
+    12: 17000,
+    24: 34000
     },
     marplatenses: {
-      6: 9000,
-      12: 18000,
-      24: 36000
-    }
+    6: 9000,
+    12: 18000,
+    24: 36000
+    },
     maicena: {
         6: 6000,
         12: 12000,
@@ -50,25 +50,25 @@ const precios = {
             24: 40000
             }
 
-  };
-  
-  document.querySelectorAll('.quantity').forEach(select => {
+};
+
+document.querySelectorAll('.quantity').forEach(select => {
     select.addEventListener('change', actualizarPrecio);
-  });
-  
-  function actualizarPrecio(event) {
+});
+
+function actualizarPrecio(event) {
     const select = event.target;
     const product = select.closest('.product');
     const tipoProducto = select.id.split('-')[0];
     const cantidad = parseInt(select.value, 10);
     const precio = precios[tipoProducto][cantidad] || 0;
     product.querySelector('.precio').textContent = precio;
-  }
-  
-  function calcularTotal() {
+}
+
+function calcularTotal() {
     let total = 0;
     document.querySelectorAll('.product').forEach(product => {
-      const precio = parseInt(product.querySelector('.precio').textContent, 10) || 0;
+    const precio = parseInt(product.querySelector('.precio').textContent, 10) || 0;
       total += precio;
     });
     document.getElementById('total').textContent = total;
@@ -120,7 +120,7 @@ contenedorIndividual.classicList.add ('card_container');
 
 
 // cargar productos
-document.addEventListener("DOMContentLoaded", (event) => {
+document.addEventListener ( "DOMContentLoaded", (event) => {
     Productos.forEach(producto => {
        contenedorIndividual.innerHTML += `
         <div class="card">
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           </div>
         </div>
       `;
-    }   else {  return false;  }    
+    }     
 );
   }
     
