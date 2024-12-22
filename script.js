@@ -87,6 +87,25 @@ document.addEventListener("DOMContentLoaded", (event) => {
     });
   });
 //
+function masInfo(id){
+Event.preventDefault();
+let idx= id.toString();
+let param = 'description' + idx;
+  let btnMasInfo = 'botonera' + idx;
+  let btnComprar = 'btnMasInfo' + idx;
+  let btnComprarDesc = 'comprar' + idx;
+
+
+    document.getElementById(`description${id}`).style.display = 'block';
+    document.getElementById(`btnMasInfo${id}`).style.display = 'none';
+    document.getElementById(`botonera${id}`).style.display = 'block';
+  }
+  function comprar(id){
+    alert(`Has seleccionado comprar al alfajor ${Productos[id-1].name}`);
+  }
+
+
+// mostrar mensaje de bienvenida
 
 
 
