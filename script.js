@@ -13,6 +13,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 // script.js
+const precios = {
+    cordobeses: {
+      6: 8500,
+      12: 17000,
+      24: 34000
+    },
+    marplatenses: {
+      6: 9000,
+      12: 18000,
+      24: 36000
+    }
+  };
+  
+  document.querySelectorAll('.quantity').forEach(select => {
+    select.addEventListener('change', actualizarPrecio);
+  });
+  
+  function actualizarPrecio(event) {
+    const select = event.target;
+    const product = select.closest('.product');
+    const tipoProducto = select.id.split('-')[0];
+    const cantidad = parseInt(select.value, 10);
+    const precio = precios[tipoProducto][cantidad] || 0;
+    product.querySelector('.precio').textContent = precio;
+  }
+  
+  function calcularTotal() {
+    let total = 0;
+    document.querySelectorAll('.product').forEach(product => {
+      const precio = parseInt(product.querySelector('.precio').textContent, 10) || 0;
+      total += precio;
+    });
+    document.getElementById('total').textContent = total;
+  }
+  
 //
 let Productos = [
 
