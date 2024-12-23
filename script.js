@@ -30,28 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
 // script.js
-const precios = {
-    cordobeses: {
-    
-    12: 17000,
-    
-    },
-    marplatenses: {
-    
-    12: 18000,
-    
-    },
-    maicena: {
-       
-        12: 12000,
-        
-        },
-        colaciones: {
-            
-            12: 20000,
-            
 
-};
 
 document.querySelectorAll('.quantity').forEach(select => {
     select.addEventListener('change', actualizarPrecio);

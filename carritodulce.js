@@ -1,6 +1,6 @@
 
 
-Alert("Bienvenidos a Alfajores Arami");
+
 
 const products = [ 
     { id: 1, 
