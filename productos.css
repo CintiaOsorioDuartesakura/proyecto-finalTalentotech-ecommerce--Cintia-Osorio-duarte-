@@ -76,4 +76,17 @@
   button:hover {
     background-color: #3600b3;
   }
-  
+  aside  {
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* Texto centrado */
+    font-size: 1.5em; /* Tamaño de fuente */
+    color: white; /* Color blanco */
+    background-color: #007BFF; /* Violeta claro */
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }

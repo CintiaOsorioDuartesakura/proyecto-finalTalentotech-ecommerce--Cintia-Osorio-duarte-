@@ -34,37 +34,21 @@
                   
                 </section>
             
-                    <section id="productos">
+                    <section id="lista-productos">
                         <h2>Nuestros productos</h2>
                         <aside class="price-list">
                             <h2><strong> Lista de Precios</strong></h2>
                             <ul>
                               <li><h3>Alfajor de Maicena</h3></li>
-                              <ul>
-                                <li>Media Docena: $6.000</li>
-                                <li>1 Docena: $12.000</li>
-                                <li>2 Docenas: $24.000</li>
-                              </ul>
+                              <li>La Docena: $12.000</li>
                               <li><h3>Alfajor Marplatense</h3></li>
-                              <ul>
-                                <li>Media Docena: $9.000</li>
-                                <li>1 Docena: $18.000</li>
-                                <li>2 Docenas: $36.000</li>
-                              </ul>
+                              <li>La Docena: $18.000</li>
                               <li><h3>Alfajor Cordobés</h3></li>
-                              <ul>
-                                <li>Media Docena: $8.500</li>
-                                <li>1 Docena: $17.000</li>
-                                <li>2 Docenas: $34.000</li>
-                              </ul>
+                              <li>La Docena: $17.000</li>
                               <li><h3>Colaciones</h3></li>
-                              <ul>
-                                <li>Media Docena: $10.000</li>
-                                <li>1 Docena: $20.000</li>
-                                <li>2 Docenas: $40.000</li>
+                              <li>La Docena: $20.000</li> 
                               </ul>
-                            </ul>
-                          </aside>
+                              </aside>
                         </section>
                         <section id="productos">
                           <h2>Productos</h2>
@@ -79,21 +63,15 @@
                             <div class="product-box"><p>Los alfajores de maicena son un clásico de la pastelería argentina. Estos alfajores delicados y suaves están hechos con una masa de maicena que se deshace en la boca, rellenos de dulce de leche y cubiertos con una generosa capa de coco rallado. Cada bocado es un deleite de sabores y texturas que evoca los recuerdos más dulces de la infancia.</p> 
                             </div>
                             <label for="maicena">Cantidad:</label> 
-                            <select id="maicena" name="maicena" class="quantity"> 
-                                <option value="0">Seleccionar</option> 
-                                <option value="6">Media Docena</option> 
+                            <select id=1 name="maicena" class="quantity"> 
                                 <option value="12">1 Docena</option> 
-                                <option value="24">2 Docenas</option> 
                             </select>
                             <label for="maicena">Precio</label>
-                            <select name="maicena" id="maicena" class="precio">
-                                <option value="6">$6.000</option> 
-                                <option value="12">$12.000</option> 
-                                <option value="24">$24.000</option>
+                            <select name="maicena" id=1 class="precio">
+                            <option value="12">$12.000</option> 
                             </select>
                             
-                                
-                            <button onclick="addToCart('Alfajor de Maicena' ,Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button> 
+                           <button onclick="addToCart('Alfajor de Maicena' ,Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button> 
                             <button onclick="irAMisCompras()"><a  href="carritodecompras.html"> Ver mis compras</a><br></button>
                           </div>
 
@@ -107,16 +85,15 @@
                             <div class="product-box"><p>El alfajor marplatense es famoso por su inigualable combinación de sabores. Estos alfajores están formados por dos galletas esponjosas rellenas de dulce de leche, bañadas en un suave chocolate semi amargo que se derrite en la boca. Originarios de Mar del Plata, estos alfajores son un verdadero símbolo de la tradición repostera argentina, perfectos para cualquier ocasión.</p> 
                             </div>
                             <label for="mdq">Cantidad:</label>
-                            <select id="mdq" name="mdq" class="quantity">
-                                <option value="0">Seleccionar</option> 
-                                <option value="6">Media Docena</option> 
+                            <select id=2 name="mdq" class="quantity">
+                                 
                                 <option value="12">1 Docena</option> 
-                                <option value="24">2 Docenas</option>
+                               
                                     </select>
-                                <select name="mdq" id="mdq" class="precio">
-                                        <option value="6">$9.000</option> 
+                                <select name="mdq" id=2 class="precio">
+                                       
                                         <option value="12">$18.000</option> 
-                                        <option value="24">$36.000</option>
+                                        
                                 </select>
                           
                           <button onclick="addToCart('Alfajores Marplatenses',Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button>
@@ -132,17 +109,16 @@
                             <div class="product-box"><p>Los alfajores cordobeses destacan por su particular textura y sabor. Con una receta que incluye harina de trigo y miel, estos alfajores están rellenos de una generosa capa de dulce de leche y cubiertos con un glaseado blanco que les da un toque distintivo. Son conocidos por su equilibrio perfecto entre dulzura y suavidad, ofreciendo una experiencia de sabor auténticamente argentina.</p>
                             </div>
                             <label for="cordobeces">Cantidad:</label> 
-                            <select id="cordobeces" name="cordobeces" class="quantity"> 
-                                <option value="0">Seleccionar</option> 
-                                <option value="6">Media Docena</option> 
+                            <select id=3 name="cordobeces" class="quantity"> 
+                                
                                 <option value="12">1 Docena</option> 
-                                <option value="24">2 Docenas</option> 
+                                 
                             </select>
                             <label for="cordobeces">Precio</label>
-                            <select name="cordobeces" id="cordobeces" class="precio">
-                                <option value="6">$8.500</option> 
+                            <select name="cordobeces" id=3 class="precio">
+                                 
                                 <option value="12">$17.000</option> 
-                                <option value="24">$34.000</option>
+                               
                             </select>
                              
                               <button onclick="addToCart('Alfajores Cordobeces',Cantidad,Precio)"><a href="carritodecompras.html">Añadir al carrito</a><br></button>
@@ -158,25 +134,30 @@
                             <div class="product-box"><p>Las colaciones cordobesas son un manjar típico de la región de Córdoba. Estas delicadezas están hechas con una masa fina y crujiente, rellenas de dulce de leche y cubiertas con un glaseado de azúcar. Su combinación de texturas y el dulce sabor a caramelo las hacen irresistibles. Perfectas para acompañar un buen café o como un capricho dulce en cualquier momento del día.</p>
                             </div>
                             <label for="colaciones">Cantidad:</label>
-                            <select id="colaciones" name="colaciones" class="quantity">
-                                <option value="0">Seleccionar</option> 
-                                <option value="6">Media Docena</option> 
+                            <select id=4 name="colaciones" class="quantity">
+                               
                                 <option value="12">1 Docena</option> 
-                                <option value="24">2 Docenas</option>
+                               
                                 <label for="colaciones">Precio</label>
                                 </select>
-                                <select name="colaciones" id="colaciones" class="precio">
+                                <select name="colaciones" id=4 class="precio">
                                         
-                                        <option value="6">$10.000</option> 
+                                        
                                         <option value="12">$20.000</option> 
-                                        <option value="24">$40.000</option>
+                                        
                                 </select>
                             </select>
                             
                               <button onclick="addToCart('Colaciones','Cantidad','Precio')"><a href="carritodecompras.html">Añadir al carrito</a><br></button>
                               <button onclick="irAMisCompras()"><a  href="carritodecompras.html"> Ver mis compras</a><br></button> 
                             </div>
-                            
+                           <section id="carrito"><h2>Mis compras</h2>
+                            <div id="product-list"></div> 
+                            <div> <h2>Total: $<span id="total">0</span></h2> 
+                            </div>
+                            <div> <button onclick="misCompras" id="buy-button">Comprar<br></button>
+                            </div>
+                          </section>
                             </li>
                             </ul>
                         </div>
@@ -202,6 +183,6 @@
                 </nav>
             </footer>
     
-    <script src="script.js"></script>
+    <script src="carritodulce.js"></script>
 </body>
 </html>
