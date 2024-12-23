@@ -1,3 +1,7 @@
+
+
+Alert("Bienvenidos a Alfajores Arami");
+
 const products = [ 
     { id: 1, 
     name: 'Alfajor de Maicena',
